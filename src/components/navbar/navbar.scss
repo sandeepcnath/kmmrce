@@ -1,0 +1,136 @@
+@import "../../styles/variables";
+
+// this is for the headroom component that shows the navbar on scroll-up
+// !important was used to override the headroom style
+.headroom-wrapper {
+  height: 82px !important;
+}
+
+.headroom {
+  z-index: 100 !important;
+}
+
+.nav {
+  background-color: var(--white);
+
+  &__inner-wrap {
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__link-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__primary-link {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  &__link-a {
+    font-size: 1rem;
+    display: block;
+    padding: 0.375em 0;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 var(--green);
+    transition: color, box-shadow, 0.25s ease;
+    
+    &_active,
+    &:focus,
+    &:hover,
+    &:active {
+      box-shadow: inset 0 -.25em 0 var(--green);
+    }
+  }
+
+  &__link-cta {
+    display: none;
+  }
+}
+
+@media (min-width: 520px) {
+  .nav {
+    &__link-cta {
+      display: initial;
+    }
+
+    &__link-li_cta {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .nav {
+    &__link-a {
+      padding: 0.75em 1rem;
+    }
+
+    &__link-cta {
+      margin-left: auto;
+    }
+
+    &__link-ul {
+      background-color: var(--white);
+      height: 1px;
+      width: 100vw;
+      overflow: hidden;
+      position: relative;
+      top: 1rem;
+      left: 0;
+      margin: 0 -1rem;
+      z-index: 100;
+      justify-content: flex-start;
+      transition: height 0.4s cubic-bezier(0.15, 0.96, 0.65, 1.15);
+
+      &_hidden {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.4s cubic-bezier(0.15, 0.96, 0.65, 1.15);
+      }
+
+      &_shown {
+        height: calc(100vh - 82px);
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    flex-wrap: nowrap;
+
+    &__inner-wrap {
+      padding: 1rem 2rem;
+    }
+
+    &__link-ul {
+      flex-direction: row;
+    }
+
+    &__link-li:not(:first-child) {
+      margin-left: 3em;
+    }
+
+    &__link-a {
+      font-size: 1.25rem;
+    }
+
+    &__link-cta {
+      order: 1;
+    }
+
+    .button_menu {
+      display: none;
+    }
+  }
+}
