@@ -1,0 +1,27 @@
+@import "../../styles/variables";
+
+.testimony-layout {
+  color: var(--black);
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 0.75em;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '"';
+      display: block;
+      font-style: italic;
+    }
+
+    &::after {
+      margin-top: 1em;
+    }
+  }
+}

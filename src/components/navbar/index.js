@@ -1,24 +1,19 @@
-import { Link, graphql, useStaticQuery } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import React, { useState } from "react"
-import Headroom from "react-headroom"
-import "./navbar.scss"
+import { Link } from "gatsby";
+import React, { useState } from "react";
+import Headroom from "react-headroom";
+import "./navbar.scss";
 
 const Navbar = () => {
-  const [isMenuVisible, setMenuVisibility] = useState(false)
+  const [isMenuVisible, setMenuVisibility] = useState(false);
   const toggleMenuVisibility = () => {
-    setMenuVisibility(!isMenuVisible)
-  }
+    setMenuVisibility(!isMenuVisible);
+  };
 
   return (
     <Headroom>
       <nav className="nav">
         <div className="nav__inner-wrap">
-          <Link
-            className="nav__primary-link"
-            to="/"
-            title="KMMRCE Home"
-          >
+          <Link className="nav__primary-link" to="/" title="KMMRCE Home">
             KMMRCE
           </Link>
           <Link
@@ -101,7 +96,7 @@ const Navbar = () => {
         </div>
       </nav>
     </Headroom>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
