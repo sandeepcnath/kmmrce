@@ -20,7 +20,7 @@ const PlatformLayout = (props) => {
           <div>
             <StaticImage
               className="home-platform__grid-img-1"
-              src="../images/Group 4508.png"
+              src="../../images/Group 4508.png"
               height={200}
               alt=""
             />
@@ -28,7 +28,7 @@ const PlatformLayout = (props) => {
           <div>
             <StaticImage
               className="home-platform__grid-img-1"
-              src="../images/Group 3860.png"
+              src="../../images/Group 3860.png"
               height={180}
               alt=""
             />
@@ -36,7 +36,7 @@ const PlatformLayout = (props) => {
           <div>
             <StaticImage
               className="home-platform__grid-img-1"
-              src="../images/Group 3956.png"
+              src="../../images/Group 3956.png"
               height={200}
               alt=""
             />
@@ -44,13 +44,13 @@ const PlatformLayout = (props) => {
           <div>
             <StaticImage
               className="home-platform__grid-img-1"
-              src="../images/Group 3864.png"
+              src="../../images/Group 3864.png"
               height={200}
               alt=""
             />
             <StaticImage
               className="home-platform__grid-img-1"
-              src="../images/Group 3867.png"
+              src="../../images/Group 3867.png"
               alt=""
             />
           </div>
@@ -60,7 +60,7 @@ const PlatformLayout = (props) => {
             <div>
               <StaticImage
                 className="home-platform__grid-img-1"
-                src="../images/Group 4507.png"
+                src="../../images/Group 4507.png"
                 height={150}
                 alt=""
               />
@@ -68,7 +68,7 @@ const PlatformLayout = (props) => {
             <div>
               <StaticImage
                 className="home-platform__grid-img-1"
-                src="../images/Group 3866.png"
+                src="../../images/Group 3866.png"
                 height={100}
                 alt=""
               />

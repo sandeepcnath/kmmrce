@@ -7,12 +7,15 @@ import PlatformLayout from "../components/platformLayout";
 import FeatureLayout from "../components/featureLayout";
 import CasestudyLayout from "../components/casestudyLayout";
 import TestimonyLayout from "../components/testimonyLayout";
-import "../styles/homepage.scss";
+import CenteredContentLayout from "../components/centeredContentLayout";
+import CtaPrompt from "../components/ctaPrompt";
+// import "../styles/homepage.scss";
 
 import mainImage from "../images/banner-asterix.svg";
 import feature1Image from "../images/Group-5056.png";
 import casestudy1Image from "../images/1282854_ou_2000.jpg";
 import testimony1Image from "../images/6UxtLv.tif.png";
+import centeredContentBackground from "../images/blobs-pattern.svg";
 
 // markup
 const IndexPage = () => {
@@ -56,6 +59,21 @@ const IndexPage = () => {
     imageAlt: "A simple chair",
   };
 
+  const centeredContent1 = {
+    title: "Super Merchants",
+    subtitle: "Multisite, made easy.",
+    description:
+      "Sed magna enim, bibendum a quam eu, commodo consectetur quam. Morbi pellentesque eu dolor luctus sagittis. Praesent commodo velit eget urna mollis dignissim. Nunc lobortis, augue non pulvinar consequat, enim massa pharetra neque.",
+    backgroundImage: { centeredContentBackground },
+    backgroundColor: "#3F36A0",
+    ctaText: "Explore Super Merchants",
+  };
+
+  const ctaPrompt1 = {
+    title: "Ready to grow your business?",
+    ctaText: "Request Demo",
+  };
+
   return (
     <Layout>
       <Seo title="Home" />
@@ -71,6 +89,8 @@ const IndexPage = () => {
         <FeatureLayout data={feature1} />
         <TestimonyLayout data={testimony1} />
         <CasestudyLayout data={casestudy1} />
+        <CenteredContentLayout data={centeredContent1} />
+        <CtaPrompt data={ctaPrompt1} />
       </main>
     </Layout>
   );

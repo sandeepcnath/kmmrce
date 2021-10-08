@@ -1,27 +1,59 @@
 @import "../../styles/variables";
 
-.testimony-layout {
-  color: var(--black);
-  background: var(--color-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
+.home-platform {
+  background: var(--black-light);
+  position: relative;
 
-  &__title {
+  &::before {
+    content: "";
+    background: #0000008a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__text-wrap {
+    color: var(--white);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__description {
+    max-width: 20em;
     margin-bottom: 0.75em;
-    position: relative;
+  }
 
-    &::before,
-    &::after {
-      content: '"';
-      display: block;
-      font-style: italic;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12rem 1rem;
+
+    div:nth-child(3),
+    div:nth-child(6) {
+      justify-self: end;
     }
 
-    &::after {
-      margin-top: 1em;
+    div:nth-child(4),
+    div:nth-child(6) {
+      align-self: end;
+    }
+
+    div:nth-child(6) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
     }
   }
 }

@@ -2,10 +2,15 @@
 
 .casestudy-layout {
   &__image-block {
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__image {
     width: 100%;
+    height: 100%;
   }
 
   &__text-block {
@@ -42,16 +47,15 @@
   .casestudy-layout {
     &__text-block {
       padding: 2rem;
+      padding-bottom: 3rem;
     }
   }
 }
 
 @media (min-width: 1024px) {
   .casestudy-layout {
-  }
-}
-
-@media (min-width: 1200px) {
-  .casestudy-layout {
+    &__text-block {
+      padding-bottom: 4rem;
+    }
   }
 }
